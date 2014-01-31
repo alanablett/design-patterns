@@ -2,7 +2,7 @@
 
 class Library {
 	
-	protected $books;
+	public $books;
 	protected $sorter;
 	protected $grouper;
 	
@@ -13,11 +13,15 @@ class Library {
 		$this->grouper = $grouper;
 	}
 	
+	public function getBooks()
+	{
+		return $this->books;
+	}
+	
 	public function organiseBooks()
 	{
 		$this->sorter->sort($this->books);
 		$this->books = $this->grouper->group($this->books);
-		return $this->books;
 	}
 	
 }

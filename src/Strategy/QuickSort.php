@@ -2,10 +2,9 @@
 
 class QuickSort implements Sorter {
 	
-	public function sort($books)
+	public function sort(&$books)
 	{
-		echo 'Quick sorting algorithm here???';
-		return asort($books);
+		natsort($books);
 	}
 	
 }
