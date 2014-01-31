@@ -9,3 +9,4 @@ Just a basic explanation and example of a number of the standard design patterns
 * Favour composition over inheritance (HAS-A is better than IS-A).
 * Strive for loosely coupled designs between objects that interact.
 * Classes should be open for extension, but closed for modification (open closed principle).
+* Depend upon abstractions not concrete classes (dependency inversion principle).
