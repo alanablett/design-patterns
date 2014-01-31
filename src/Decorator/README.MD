@@ -1,0 +1,7 @@
+# Decorator Pattern
+
+Attaches additional functionality to an object dynamically. It is a flexible alternative to subclassing.
+
+## Example
+
+We have a product interface that defines `getName` and `getPrice`. We then have a concrete implementation of the product interface called `Computer`. The `Computer` class simply has a property for the name and the price which get set in the constructor. They are then retrieved using the getter methods. To create a decorator we then create an intermediary abstract class called `ProductDecorator` which again extends `Product`. This class will act as a base class to our actual decorators. Its job is to contain the instance of the object we are decorating (in this case a computer product). It cannot be instantiated itself so it just contains the instance of the object we're decorating. This allows it's child classes (the actual decorators) to add their behaviour to the instance we're interested in. Since the abstract decorator implements the `Product` interface, we know our decorators must implement the same methods as the instance we're decorating. In this case we create the computer, set its name and price, then decorate with the `MouseDecorator`. This just adds additional text to the name by calling the `getName` on the instance we're decorating, then adding its own text into the end. The same process is used to add an additional value to the price.
